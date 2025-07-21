@@ -1,0 +1,508 @@
+/* LoginPage.css */
+
+/* Container principal */
+.login-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 25%, #f3e8ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Elementos decorativos de fundo */
+.decorative-elements {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.2;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.bubble-1 {
+  top: -2.5rem;
+  left: -2.5rem;
+  width: 10rem;
+  height: 10rem;
+  background-color: #f9a8d4;
+}
+
+.bubble-2 {
+  top: 33.333333%;
+  right: -5rem;
+  width: 15rem;
+  height: 15rem;
+  background-color: #fda4af;
+  animation-delay: 1s;
+}
+
+.bubble-3 {
+  bottom: -5rem;
+  left: 33.333333%;
+  width: 20rem;
+  height: 20rem;
+  background-color: #d8b4fe;
+  animation-delay: 2s;
+}
+
+/* Wrapper do login */
+.login-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 32rem;
+  z-index: 10;
+}
+
+/* Card principal */
+.login-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 2rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 3rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 20;
+}
+
+.login-card:hover {
+  transform: scale(1.02);
+}
+
+/* Header do login */
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.logo-icon {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(to right, #f472b6, #f43f5e);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: rotate(3deg);
+}
+
+.stethoscope-icon {
+  width: 2rem;
+  height: 2rem;
+  color: white;
+}
+
+.heart-badge {
+  position: absolute;
+  top: -0.25rem;
+  right: -0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: linear-gradient(to right, #fb7185, #f472b6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heart-icon {
+  width: 0.75rem;
+  height: 0.75rem;
+  color: white;
+}
+
+.app-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #db2777, #9333ea);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.app-subtitle {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* Formulário */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper .password-toggle {
+  display: flex !important;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  width: 1.25rem;
+  height: 1.25rem;
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem 3rem 1rem 3rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.75rem;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  color: #1f2937;
+  position: relative;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #f472b6;
+  box-shadow: 0 0 0 4px rgba(244, 114, 182, 0.1);
+}
+
+.password-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  color: #9ca3af;
+  font-size: 20px;
+}
+
+.password-toggle:hover {
+  color: #6b7280;
+}
+
+.password-toggle:focus {
+  outline: none;
+}
+
+.password-toggle svg {
+   width: 1.25rem !important;
+  height: 1.25rem !important;
+  color: #6b7280 !important;
+  display: block !important;
+  fill: currentColor !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.password-toggle:hover svg {
+  color: #374151 !important;
+}
+
+.password-toggle > * {
+  width: 20px !important;
+  height: 20px !important;
+  stroke: #9ca3af !important;
+  fill: none !important;
+  stroke-width: 2 !important;
+  display: block !important;
+}
+
+.password-toggle:hover > * {
+  stroke: #6b7280 !important;
+}
+
+/* Mensagem de erro */
+.error-message {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.error-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  background: #ef4444;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.error-icon svg {
+  width: 0.75rem;
+  height: 0.75rem;
+  color: white;
+}
+
+.error-message p {
+  color: #b91c1c;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* Botões */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.primary-button {
+  width: 100%;
+  background: linear-gradient(to right, #ec4899, #f43f5e);
+  color: white;
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  min-width: 8rem;
+  min-height: 3.5rem;
+  
+  position: relative;
+  overflow: hidden;
+}
+
+.primary-button:hover:not(:disabled) {
+  background: linear-gradient(to right, #db2777, #e11d48);
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.primary-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.secondary-button {
+  width: 100%;
+  border: 2px solid #e5e7eb;
+  background: #ffffff;
+  color: #374151;
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.secondary-button:hover {
+  border-color: #f9a8d4;
+  color: #db2777;
+  transform: scale(1.02);
+}
+
+/* Loading spinner */
+.loading-spinner {
+  width: 0.875rem; /* menor que 1rem */
+  height: 0.875rem;
+  border: 2px solid white;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  box-sizing: border-box;
+}
+
+/* Footer */
+.login-footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.login-footer p {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.footer-heart {
+  width: 0.75rem;
+  height: 0.75rem;
+  color: #ec4899;
+}
+
+/* Corações flutuantes */
+.floating-hearts {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.floating-heart {
+  position: absolute;
+  opacity: 0.6;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.floating-heart svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.heart-1 {
+  top: 2.5rem;
+  right: 1.25rem;
+  color: #f9a8d4;
+  animation-delay: 1s;
+}
+
+.heart-2 {
+  bottom: 2.5rem;
+  left: 1.25rem;
+  color: #fda4af;
+  animation-delay: 2s;
+}
+
+.heart-2 svg {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.heart-3 {
+  top: 33.333333%;
+  left: 2rem;
+  color: #d8b4fe;
+  opacity: 0.4;
+  animation-delay: 3s;
+}
+
+.heart-3 svg {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+/* Animações */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 1rem;
+  }
+  
+  .login-card {
+    padding: 2rem;
+  }
+  
+  .app-title {
+    font-size: 1.5rem;
+  }
+  
+  .login-wrapper {
+    max-width: 28rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .login-container {
+    padding: 0.5rem;
+  }
+  
+  .login-card {
+    padding: 1.5rem;
+  }
+  
+  .bubble-2,
+  .bubble-3 {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .login-wrapper {
+    max-width: 36rem;
+  }
+  
+  .login-card {
+    padding: 4rem;
+  }
+}
